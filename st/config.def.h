@@ -6,10 +6,9 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font =
-    "Modern DOS 8x16:pixelsize=16:antialias=true:autohint=true";
+    "Iosevka Nerd Font:pixelsize=20:antialias=true:autohint=true";
 static char *font2[] = {
-    "Hack:pixelsize=16:antialias=true:autohint=true",
-    "SourceCodePro:pixelsize=15"};
+    "Noto Color Emoji:pixelsize=20:antialias=true:autohint=true"};
 static int borderpx = 0;
 
 /*
@@ -110,36 +109,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 2;
 
 /* bg opacity */
-float alpha = 0.96;
-
-//static const char *colorname[] = {
-//    /* 8 normal colors */
-//    "#1e1f23", // Background
-//    "#f8511b", // Red
-//    "#5af78e", // Green
-//    "#f8cc6c", // Yellow
-//    "#49baff", // Blue
-//    "#ff79c6", // Magenta
-//    "#91f9ff", // Cyan
-//    "#ffffff", // White
-//
-//    /* 8 bright colors */
-//    "#666978", // Bright Background
-//    "#ff5555", // Bright Red
-//    "#50fa7b", // Bright Green
-//    "#f1fa8c", // Bright Yellow
-//    "#bd93f9", // Bright Blue
-//    "#ff79c6", // Bright Magenta
-//    "#8be9fd", // Bright Cyan
-//    "#ffffff", // Bright White
-//
-//    [255] = 0,
-//
-//    /* more colors can be added after 255 to use with DefaultXX */
-//    "#1e1f23", // Cursor Text
-//    "#f8f8f2", // Foreground
-//    "#a9b1d6"  // Cursor
-//};
+float alpha = 1.0;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -162,7 +132,7 @@ static const char *colorname[] = {
     "#d4d5d5", /* white   */
 
     [255] = 0, "#dbdfdf", /* default foreground colour */
-    "#1f1e22",            /* default background colour */
+    "#0c0c0c",            /* default background colour */
     "#28292f",
 };
 
