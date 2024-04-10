@@ -161,7 +161,7 @@ static const char *colorname[] = {
     "#63c4b5", /* cyan    */
     "#d4d5d5", /* white   */
 
-    [255] = 0, "#dbdfdf", /* default foreground colour */
+    [255] = 0, "#dfcedb", /* default foreground colour */
     "#1f1e22",            /* default background colour */
     "#28292f",
 };
@@ -178,7 +178,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers

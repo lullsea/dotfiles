@@ -19,5 +19,4 @@ alias 'wificonnect'='nmcli device wifi connect'
 alias 'incvol'='pactl set-sink-volume @DEFAULT_SINK@ +5%'
 alias 'decvol'='pactl set-sink-volume @DEFAULT_SINK@ -5%'
 alias 'cat'='ccat'
-
 alias 'bton'='systemctl bluetooth on'
