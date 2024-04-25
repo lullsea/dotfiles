@@ -12,7 +12,7 @@
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappx     = 5;        /* pixel gap between clients */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 6;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 7;        /* vertical padding for statusbar */
@@ -110,13 +110,17 @@ static Key keys[] = {
 	{ MODKEY,                 XK_0,            view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,       XK_0,            tag,            {.ui = ~0 } },
 	{ MODKEY,                 XK_comma,        focusmon,       {.i = -1 } },
-	{ MODKEY,                 XK_period,       focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,       XK_comma,        tagmon,         {.i = -1 } },
+    { MODKEY,                 XK_period,       focusmon,       {.i = +1 } },
+    { MODKEY|ShiftMask,       XK_comma,        tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,       XK_period,       tagmon,         {.i = +1 } },
     
     /* Apps Launched with SUPER + ALT + KEY  */
 	{ Mod1Mask|ShiftMask,        XK_b,            spawn,          CMD("firefox") },
 	{ MODKEY,        XK_e,            spawn,          CMD("thunar") },
+    { MODKEY,        XK_Up,           spawn,          CMD("brightnessctl set 5%+") },
+    { MODKEY,        XK_Down,           spawn,          CMD("brightnessctl set 5%-") },
+    { MODKEY,        XK_Right,          spawn,          CMD("pactl set-sink-volume @DEFAULT_SINK@ +5%") },
+    { MODKEY,        XK_Left,           spawn,          CMD("pactl set-sink-volume @DEFAULT_SINK@ -5%") },
 	
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)

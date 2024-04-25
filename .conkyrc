@@ -1,6 +1,6 @@
 conky.config = {
     alignment = 'bottom_left',
-    xinerama_head = 2,
+    xinerama_head = 1,
     background = true,
     cpu_avg_samples = 2,
     xftalpha = 0.2,
@@ -15,10 +15,10 @@ conky.config = {
     draw_shades = false,
     use_xft = true,
     font = 'Hack Nerd Font:size=11',
-    gap_x = 25,
+    gap_x = 30,
     gap_y = 200,
     no_buffers = true,
---  minimum_width = 160, minimum_height = 5,
+--  minimum_width = 200, minimum_height = 5,
 --  maximum_width = 400,
     net_avg_samples = 2,
     uppercase = false,
@@ -50,7 +50,7 @@ color3='#575274', -- green
 color4='#fcc467', -- yellow
 color5='#6fadea', -- blue
 color6='#d466e9', -- magenta
-color7='#63c4b5', -- cyan
+color7='#c85258', -- red
 color8='#d4d5d5', -- white
 color9='#242424', -- black
 
@@ -61,8 +61,10 @@ ${voffset 8}$color${font Cantarell Light:size=16}${time %A}$font${voffset -8}$al
 $color${voffset -30}$color${font Cantarell Light:size=18}${time %B}$font${voffset -3} $color${font Cantarell Light:size=20}${time %Y}$font
 #${voffset 10}$alignr$color Kraków (PL) ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EPKK temperature temperature 15}°C
 #
+${font Cantarell Light:size=18}${color7}Big Jet Plane$font${color}
 
 Battery: ${battery_percent BAT1}% ${alignr}${battery_bar 8,70 BAT1}
+${offset 140}$color${time %H:%M:%S}
 
 ${voffset 10}${goto 12}${color3}${font Cantarell Light:size=9}CPU$alignr${color2}${font}$cpu%
 $color2${goto 12}${cpubar 4,200}
@@ -83,7 +85,7 @@ $alignr$color memory ${color2}$mem - $memmax
 #${alignr}${color2}${font Cantarell Light:size=9}swap $swapmax - $swap
 ${voffset 10}$alignr${execi 1200 whoami}@${nodename}
 ${alignr}${color2}${font Cantarell Light:size=9}uptime ${color}${uptime_short}
-$alignr${color} Arch Linux ${execi 10000 awk -F'=' '/DISTRIB_RELEASE=/ {printf $2" "} /CODENAME/ {print $2}' /etc/lsb-release}
+$alignr${color} Arch Linux ${execi 10000 awk -F'=' '/DISTRIB_RELEASE=/ {printf $2" "} /CODENAME/ {print $2}'}
 ${alignr}${color2}${font Cantarell Light:size=9}${alignr}kernel ${color}${kernel}
 ${alignr}${color2}${font Cantarell Light:size=9}${alignr}filesystem ${color}${fs_type}
 ${voffset 10}${alignr}${color} packages installed: ${color2}${execi 10000 pacman -Q | wc -l}
