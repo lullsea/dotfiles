@@ -44,12 +44,8 @@ vim.opt.foldlevelstart = 999
 -- nvim-tree binds
 vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>E", ":cd %:h<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>gc", ":CopilotChatToggle<CR><C-w>L", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>fF", ":LazyFormat<CR>", { noremap = true, silent = true })
 
