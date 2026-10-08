@@ -6,7 +6,6 @@ return {
 		},
 		config = function()
 			local telescope = require("telescope")
-			telescope.load_extension("fzf")
 			telescope.setup({
 				defaults = {
 					wrap_result = true,

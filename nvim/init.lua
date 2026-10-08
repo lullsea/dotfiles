@@ -27,26 +27,27 @@ require("lazy").setup({
 })
 
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme vague]])
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4 -- A TAB character looks like 4 spaces
+vim.opt.tabstop = 2 -- A TAB character looks like 4 spaces
 vim.opt.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
-vim.opt.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
-vim.opt.shiftwidth = 4 -- Number of spaces inserted when indenting
+vim.opt.softtabstop = 2 -- Number of spaces inserted instead of a TAB character
+vim.opt.shiftwidth = 2 -- Number of spaces inserted when indenting
 
 vim.opt.swapfile = false
 vim.opt.foldlevelstart = 999
+vim.g.snacks_animate = false
 
 -- nvim-tree binds
 vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>E", ":cd %:h<CR>", { noremap = true, silent = true })
 
 -- vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>gc", ":CopilotChatToggle<CR><C-w>L", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>gC", ":CopilotChatToggle<CR><C-w>L", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>fF", ":LazyFormat<CR>", { noremap = true, silent = true })
 
 -- telescope binds
@@ -55,3 +56,5 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+
+vim.env.PATH = vim.env.PATH .. ":" .. os.getenv("HOME") .. "/.local/bin"
